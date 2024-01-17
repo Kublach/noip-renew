@@ -3,16 +3,20 @@ set -e
 
 PYTHON=python3
 USER=$(whoami)
+#if [ "$USER" == "root" ]; then
+#    USER=$1
+#    if [ -z "$USER" ]; then
+#        echo "Chrome is safer to run as normal user instead of 'root', so"
+#        echo "run the script as a normal user (with sudo permission), "
+#        echo "or specify the user: $0 <user>"
+#        exit 1
+#    fi
+#    HOME=/home/$USER
 if [ "$USER" == "root" ]; then
-    USER=$1
-    if [ -z "$USER" ]; then
-        echo "Chrome is safer to run as normal user instead of 'root', so"
-        echo "run the script as a normal user (with sudo permission), "
-        echo "or specify the user: $0 <user>"
-        exit 1
-    fi
-    HOME=/home/$USER
+    HOME=/root/
+fi    
 else
+    HOME=/home/$USER
     SUDO=sudo
 fi
 
@@ -36,7 +40,8 @@ function install() {
     esac
     # Debian9 package 'python-selenium' does not work with chromedriver,
     # Install from pip, which is newer
-    $SUDO $PYTHON -m pip install selenium
+    #$SUDO $PYTHON -m pip install selenium
+    apt install python3-selenium
 }
 
 function install_arch(){
