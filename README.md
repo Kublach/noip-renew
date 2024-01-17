@@ -12,7 +12,7 @@ NOTE: this is an up-to-date fork of loblab/noip-renew repository as it seems it'
 - Ref: [Technical explanation for the code (Chinese)](http://www.jianshu.com/p/3c8196175147)
 - Created: 11/04/2017
 - Original Author: loblab
-- Fork Mantainer: neothematrix
+- Fork Mantainer: kublach
 - Contributors: [IDemixI](https://github.com/IDemixI), [Angel0ffDeath](https://github.com/Angel0ffDeath), [benyjr](https://github.com/benyjr)
 
 ![noip.com hosts](https://raw.githubusercontent.com/loblab/noip-renew/master/screenshot.png)
@@ -26,7 +26,7 @@ Installing Chromium via Snap and then linking chromedriver to /usr/bin/chromedri
 
 ## Usage
 
-1. Clone this repository to the device you will be running it from. (`git clone https://github.com/neothematrix/noip-renew.git`)
+1. Clone this repository to the device you will be running it from. (`git clone https://github.com/Kublach/noip-renew.git`)
 2. Run setup.sh and set your noip.com account information,
 3. Run noip-renew-USERNAME command.
 
